@@ -16,10 +16,10 @@ sudo echo vm.swappiness = 10 | sudo tee -a /etc/sysctl.conf
 sudo sysctl vm.vfs_cache_pressure=50
 
 echo IP rules
-sudo apt install iptables-persistent -y
-sudo apt-get install fail2ban -y
 echo iptables-persistent iptables-persistent/autosave_v4 boolean true | sudo debconf-set-selections
 echo iptables-persistent iptables-persistent/autosave_v6 boolean true | sudo debconf-set-selections
+sudo apt install iptables-persistent -y
+sudo apt-get install fail2ban -y
 sudo iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
 sudo iptables -A INPUT -p tcp --dport 22 -j ACCEPT
 sudo iptables -I INPUT 1 -i lo -j ACCEPT
