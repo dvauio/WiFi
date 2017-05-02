@@ -1,6 +1,6 @@
 #!/bin/sh
-NAME="my.fqdn.com"
-EMAIL="my@email.add"
+NAME="dev-sapce.site"
+EMAIL="davidvaughan556@gmail.com"
 apt-get update
 echo y | apt-get upgrade
 cd /opt
