@@ -2,8 +2,8 @@
 # Script source used from https://community.ubnt.com/t5/UniFi-Wireless/UniFi-Ubuntu-16-04-fully-automatic-Installation-NGINX-Proxy-amp/td-p/1596848
 
 # Edit these following 2 lines:
-NAME="my.fqdn.com"
-EMAIL="my@email.add"
+NAME="dev-space.site"
+EMAIL="davidvaughan556@gmail.com"
 
 # Comment out the following 4 lines if you already have the UniFi software installed.
 # Note - the UniFi software requires at-least 20GiB disk space.
