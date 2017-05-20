@@ -15,7 +15,13 @@ sudo echo 10 | sudo tee /proc/sys/vm/swappiness
 sudo echo vm.swappiness = 10 | sudo tee -a /etc/sysctl.conf
 sudo sysctl vm.vfs_cache_pressure=50
 
-echo Install
+echo Install Certbot
+sudo apt-get install software-properties-common -y
+sudo add-apt-repository ppa:certbot/certbot -y
+sudo apt-get update
+sudo apt-get install certbot -y
+
+echo Install haveged
 sudo apt-get install haveged -y
 
 echo IP rules
