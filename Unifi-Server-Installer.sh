@@ -15,6 +15,9 @@ sudo echo 10 | sudo tee /proc/sys/vm/swappiness
 sudo echo vm.swappiness = 10 | sudo tee -a /etc/sysctl.conf
 sudo sysctl vm.vfs_cache_pressure=50
 
+echo Install
+sudo apt-get install haveged -y
+
 echo IP rules
 echo iptables-persistent iptables-persistent/autosave_v4 boolean true | sudo debconf-set-selections
 echo iptables-persistent iptables-persistent/autosave_v6 boolean true | sudo debconf-set-selections
