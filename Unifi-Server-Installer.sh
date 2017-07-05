@@ -47,4 +47,12 @@ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv C0A52C50
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
 sudo apt update
 sudo apt install unifi -y
+echo "JSVC_EXTRA_OPTS=\"\$JSVC_EXTRA_OPTS -Xss1280k\"" | sudo tee -a /etc/default/unifi
 echo Congratulations UniFi is now installed.
+
+echo spotipo Install
+wget https://spotipo.com/static/uploads/spotipo/spotipo_2.0.6_amd64.deb
+sudo dpkg -i spotipo_2.0.6_amd64.deb
+sudo apt-get install -f -y
+
+sudo reboot
