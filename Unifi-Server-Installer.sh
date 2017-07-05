@@ -24,22 +24,6 @@ sudo apt-get install certbot -y
 echo Install haveged
 sudo apt-get install haveged -y
 
-echo IP rules
-echo iptables-persistent iptables-persistent/autosave_v4 boolean true | sudo debconf-set-selections
-echo iptables-persistent iptables-persistent/autosave_v6 boolean true | sudo debconf-set-selections
-sudo apt install iptables-persistent -y
-sudo apt-get install fail2ban -y
-sudo iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
-sudo iptables -A INPUT -p tcp --dport 22 -j ACCEPT
-sudo iptables -I INPUT 1 -i lo -j ACCEPT
-sudo iptables -A INPUT -p tcp --dport 8081 -j ACCEPT
-sudo iptables -A INPUT -p tcp --dport 8080 -j ACCEPT
-sudo iptables -A INPUT -p tcp --dport 8443 -j ACCEPT
-sudo iptables -A INPUT -p tcp --dport 8880 -j ACCEPT
-sudo iptables -A INPUT -p tcp --dport 8843 -j ACCEPT
-sudo iptables -A INPUT -p tcp --dport 27117 -j ACCEPT
-sudo iptables -A INPUT -j DROP
-
 echo Unifi Installtion
 sudo echo deb http://www.ubnt.com/downloads/unifi/debian unifi5 ubiquiti | tee -a /etc/apt/sources.list
 sudo echo deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen | tee -a /etc/apt/sources.list
