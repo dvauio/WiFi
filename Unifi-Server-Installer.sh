@@ -36,7 +36,7 @@ echo Congratulations UniFi is now installed.
 
 echo spotipo Install
 wget https://customer.spotipo.com/pro-download/0TWCHJHU38QJ2FXBNAPJXKUHME3Q9KSVT48TJU7OIR6DS87OAI/spotipo_latest-pro_amd64.deb
-sudo dpkg -i spotipo_2.0.6_amd64.deb
+sudo dpkg -i spot*
 sudo apt-get install -f -y
 sudo apt-get install -f -y
 
