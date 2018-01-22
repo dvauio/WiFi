@@ -31,14 +31,5 @@ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv C0A52C50
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
 sudo apt update
 sudo apt install unifi -y
-echo "JSVC_EXTRA_OPTS=\"\$JSVC_EXTRA_OPTS -Xss1280k\"" | sudo tee -a /etc/default/unifi
-echo Congratulations UniFi is now installed.
-
-echo spotipo Install
-wget https://customer.spotipo.com/pro-download/0TWCHJHU38QJ2FXBNAPJXKUHME3Q9KSVT48TJU7OIR6DS87OAI/spotipo_latest-pro_amd64.deb
-sudo dpkg -i spot*
-sudo apt-get install -f -y
-sudo apt-get install -f -y
-
 
 sudo reboot
