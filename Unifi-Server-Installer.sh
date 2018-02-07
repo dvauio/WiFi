@@ -24,6 +24,9 @@ sudo apt-get install certbot -y
 echo Install haveged
 sudo apt-get install haveged -y
 
+echo UNMS  Installtion
+curl -fsSL https://raw.githubusercontent.com/Ubiquiti-App/UNMS/master/install.sh > /tmp/unms_install.sh && sudo bash /tmp/unms_install.sh --update
+
 echo Unifi Installtion
 sudo echo deb http://www.ubnt.com/downloads/unifi/debian unifi5 ubiquiti | tee -a /etc/apt/sources.list
 sudo echo deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen | tee -a /etc/apt/sources.list
