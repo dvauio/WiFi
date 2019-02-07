@@ -26,14 +26,6 @@ sudo apt install certbot -y
 echo Install haveged
 sudo apt install haveged -y
 
-sudo apt remove --autoremove mongodb-org
-sudo rm /etc/apt/sources.list.d/mongodb*.list
-sudo apt update
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv E52529D4
-sudo bash -c 'echo "deb [arch=amd64] http://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.0 multiverse" > /etc/apt/sources.list.d/mongodb-org-4.0.list'
-sudo apt update
-sudo apt install mongodb-org
-
 echo Unifi Installtion
 wget https://dl.ubnt.com/unifi/5.6.40/unifi_sysvinit_all.deb
 sudo dpkg -i unifi_sysvinit_all.deb -y
