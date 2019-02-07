@@ -26,9 +26,9 @@ sudo apt install certbot -y
 echo Install haveged
 sudo apt install haveged -y
 
-echo Unifi Installtion
-wget https://dl.ubnt.com/unifi/5.6.40/unifi_sysvinit_all.deb
+#echo Unifi Installtion
+#wget https://dl.ubnt.com/unifi/5.6.40/unifi_sysvinit_all.deb
 
-sudo dpkg -i unifi_sysvinit_all.deb
+#sudo dpkg -i unifi_sysvinit_all.deb
 
-sudo reboot
+#sudo reboot
