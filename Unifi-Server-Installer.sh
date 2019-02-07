@@ -34,7 +34,7 @@ echo "deb http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.4 multiverse" 
 sudo apt update
 sudo wget -O /etc/apt/trusted.gpg.d/unifi-repo.gpg https://dl.ui.com/unifi/unifi-repo.gpg 
 sudo apt update
-sudo apt-get install apt-transport-https
-sudo apt install unifi
+sudo apt-get install apt-transport-https -y
+sudo apt install unifi -y
 
 sudo reboot
