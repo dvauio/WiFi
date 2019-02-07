@@ -32,7 +32,7 @@ echo 'deb http://www.ui.com/downloads/unifi/debian stable ubiquiti' | sudo tee /
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 0C49F3730359A14518585931BC711F9BA15703C6
 echo "deb http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.4.list
 sudo apt update
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 06E85760C0A52C50
+sudo wget -O /etc/apt/trusted.gpg.d/unifi-repo.gpg https://dl.ui.com/unifi/unifi-repo.gpg 
 sudo apt update
 sudo apt-get install apt-transport-https
 sudo apt install unifi
