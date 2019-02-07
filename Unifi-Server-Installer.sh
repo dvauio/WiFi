@@ -20,23 +20,20 @@ sudo echo vm.swappiness = 10 | sudo tee -a /etc/sysctl.conf
 sudo sysctl vm.vfs_cache_pressure=50
 
 echo Install Certbot
-sudo apt-get install software-properties-common -y
 sudo add-apt-repository ppa:certbot/certbot -y
-sudo apt-get update
-sudo apt-get install certbot -y
+sudo apt update
+sudo apt install certbot -y
 
 echo Install haveged
-sudo apt-get install haveged -y
-
-
+sudo apt install haveged -y
 
 echo Unifi Installtion
 wget https://dl.ubnt.com/unifi/5.9.29/unifi_sysvinit_all.deb
 
-sudo apt install mongodb-server
-sudo apt install mongodb-10gen
-sudo apt install mongodb-org-server
-sudo apt install ./unifi_sysvinit_all.deb
+sudo apt install mongodb-server -y
+sudo apt install mongodb-10gen -y
+sudo apt install mongodb-org-server -y
+sudo apt install ./unifi_sysvinit_all.deb -y
 
 
 
