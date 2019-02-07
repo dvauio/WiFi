@@ -1,5 +1,9 @@
 #!/bin/bash 
 
+# To run on server type below
+# wget -O - https://raw.githubusercontent.com/dvauio/WiFi/master/Unifi-Server-Installer.sh | bash
+
+
 echo Update OS
 sudo apt update
 sudo apt upgrade -y
