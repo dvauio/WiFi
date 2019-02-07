@@ -24,15 +24,16 @@ sudo apt-get install certbot -y
 echo Install haveged
 sudo apt-get install haveged -y
 
-echo Install Ubnt UNMS
-#curl -fsSL https://raw.githubusercontent.com/Ubiquiti-App/UNMS/master/install.sh > /tmp/unms_install.sh && sudo bash /tmp/unms_install.sh
+
 
 echo Unifi Installtion
-sudo echo deb http://www.ubnt.com/downloads/unifi/debian unifi5 ubiquiti | tee -a /etc/apt/sources.list
-sudo echo deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen | tee -a /etc/apt/sources.list
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv C0A52C50
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
-sudo apt update
-sudo apt install unifi -y
+wget https://dl.ubnt.com/unifi/5.9.29/unifi_sysvinit_all.deb
+
+sudo apt install mongodb-server
+sudo apt install mongodb-10gen
+sudo apt install mongodb-org-server
+sudo apt install ./unifi_sysvinit_all.deb
+
+
 
 sudo reboot
